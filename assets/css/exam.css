@@ -1,4 +1,15 @@
 /* Pulsanti risposte stile Epicode quiz  */
+img {
+  width: 15%;
+  height: auto;
+}
+body {
+  background-image: url("../img/bg.jpg");
+  background-size: cover; /* Copre tutto lo schermo */
+  background-position: center; /* Centra l'immagine */
+  background-repeat: no-repeat; /* Non ripete l'immagine */
+}
+
 #answers {
   display: grid;
   grid-template-columns: repeat(
@@ -65,4 +76,76 @@
 .answer-btn:active:not(:disabled) {
   background: #c1008e;
   transform: scale(0.98);
+}
+/* Contenitore timer */
+#timer {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 150px;
+  height: 150px;
+}
+
+#timer svg {
+  width: 150px;
+  height: 150px;
+  transform: rotate(-90deg);
+}
+
+/* Cerchio grigio di sfondo */
+circle.bg {
+  fill: none;
+  stroke: #3c2c56;
+  stroke-width: 10;
+}
+
+/* Cerchio colorato che si anima */
+circle.progress {
+  fill: none;
+  stroke: #00e6fb;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke-dasharray: 282.6; /* 2πr con r=45 */
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+}
+
+.timer-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+  color: white;
+}
+
+#seconds {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.label-top,
+.label-bottom {
+  font-size: 0.7rem;
+  color: #ccc;
+  display: block;
+  text-transform: uppercase;
+}
+#questionCount {
+  text-align: center;
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: 40px;
+  text-transform: uppercase;
+}
+
+#questionCount .label {
+  color: white;
+}
+
+#questionCount .total {
+  color: #d20094; /* rosa brillante come da esempio */
 }

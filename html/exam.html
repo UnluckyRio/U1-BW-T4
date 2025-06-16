@@ -25,33 +25,22 @@
   <body>
     <div id="container">
       <div class="quiz-header">
-        <img src="epicode-logo.png" alt="Epicode Logo" class="logo" />
+        <img
+          src="../assets/img/epicode_logo.png"
+          alt="Epicode Logo"
+          class="logo"
+        />
         <div id="timer">
-          <svg width="50" height="50">
-            <circle
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="#00e6fb"
-              stroke-width="5"
-              fill="none"
-            />
-            <circle
-              id="progress"
-              cx="25"
-              cy="25"
-              r="20"
-              stroke="#fff"
-              stroke-width="5"
-              fill="none"
-              stroke-dasharray="125.6"
-              stroke-dashoffset="0"
-            />
+          <svg viewBox="0 0 100 100">
+            <circle class="bg" cx="50" cy="50" r="45" />
+            <circle class="progress" cx="50" cy="50" r="45" />
           </svg>
-          <span id="seconds">20</span>
-          <span class="small">SECONDS<br />REMAINING</span>
+          <div class="timer-text">
+            <span class="label-top">SECONDS</span>
+            <span id="seconds">20</span>
+            <span class="label-bottom">REMAINING</span>
+          </div>
         </div>
-      </div>
       <h2 id="question">How can I create a checkbox in HTML?</h2>
       <div id="answers">
         <button class="answer-btn">&lt;input type = "check"&gt;</button>
@@ -59,7 +48,10 @@
         <button class="answer-btn">&lt;checkbox&gt;</button>
         <button class="answer-btn">&lt;input type = "button"&gt;</button>
       </div>
-      <div id="questionCount">QUESTION 1 / 10</div>
+      <div id="questionCount">
+        <span class="label">QUESTION 1 /</span>
+        <span class="total">10</span>
+      </div>
     </div>
     <!-- HEADER -->
     <header></header>
