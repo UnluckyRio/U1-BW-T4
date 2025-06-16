@@ -141,12 +141,12 @@ footer {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(30px);
   box-shadow: 0 0 3px black; /* Colore di sfondo del footer */
-  color: #fff; /* Colore del testo del footer */
+  color: #e8e7ec; /* Colore del testo del footer */
   text-decoration: none; /* Rimuove la sottolineatura dal testo del footer */
 }
 /* Footer <a> style */
 footer a {
-  color: #fff; /* Colore del link nel footer */
+  color: #e8e7ec; /* Colore del link nel footer */
   text-decoration: none; /* Rimuove la sottolineatura dal link */
 }
 footer a:hover {
