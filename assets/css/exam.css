@@ -1,0 +1,68 @@
+/* Pulsanti risposte stile Epicode quiz  */
+#answers {
+  display: grid;
+  grid-template-columns: repeat(
+    2,
+    auto
+  ); /* 2 colonne con larghezza automatica */
+  gap: 16px; /* spazio tra i pulsanti */
+  justify-content: center; /* centra il gruppo dei pulsanti orizzontalmente */
+  align-items: center; /* opzionale, centra verticalmente nella griglia */
+  margin: 40px 0 20px 0;
+}
+
+.answer-btn {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  border: none; /* rimuove il bordo uniforme */
+  border-top: 2px solid #ffffffcc; /* bianco semitrasparente */
+  border-bottom: 2px solid #888888aa; /* grigio semitrasparente */
+
+  color: #fff;
+  border-radius: 40px;
+  padding: 18px 0;
+  font-size: 1.18rem;
+  cursor: pointer;
+  min-width: 320px;
+  max-width: 400px;
+  width: 340px;
+  text-align: center;
+  font-weight: 700;
+  box-shadow: 0 6px 24px #0002;
+  transition: background 0.18s, color 0.18s, border-color 0.18s, transform 0.09s;
+  outline: none;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  line-height: 1.3;
+  margin: 0;
+}
+
+.answer-btn.selected,
+.answer-btn.correct {
+  background: linear-gradient(90deg, #e6007a 0%, #00e6fb 100%);
+  color: #fff;
+  border-color: #fff;
+}
+
+.answer-btn:hover:not(:disabled) {
+  border-color: #fff;
+  transform: scale(1.03);
+}
+
+.answer-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+/* Hover: rosa trasparente */
+.answer-btn:hover:not(:disabled) {
+  background: #c1008e;
+  transform: scale(1.03);
+}
+
+/* Active: più rosa e più "premuto" */
+.answer-btn:active:not(:disabled) {
+  background: #c1008e;
+  transform: scale(0.98);
+}
