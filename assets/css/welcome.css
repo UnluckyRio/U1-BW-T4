@@ -148,3 +148,29 @@ header > img {
   padding-top: 50px;
   padding-bottom: 40px;
 }
+
+/* FOOTER */
+footer {
+  width: 100%; /* Larghezza del footer */
+  text-align: center; /* Centra il testo del footer */
+  padding: 10px; /* Padding interno per il footer */
+  font-family: inter; /* Font del footer */
+  font-size: 1rem; /* Dimensione del testo del footer */
+  margin-top: auto; /* Spinge il footer in fondo alla pagina */
+  position: relative; /* Posizione relativa per il footer */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  box-shadow: 0 0 3px black; /* Colore di sfondo del footer */
+  color: #e8e7ec; /* Colore del testo del footer */
+  text-decoration: none; /* Rimuove la sottolineatura dal testo del footer */
+}
+/* Footer <a> style */
+footer a {
+  color: #e8e7ec; /* Colore del link nel footer */
+  text-decoration: none; /* Rimuove la sottolineatura dal link */
+}
+footer a:hover {
+  color: #00ffff; /* Colore del link attivo nel footer */
+  cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+  text-decoration: none;
+}
