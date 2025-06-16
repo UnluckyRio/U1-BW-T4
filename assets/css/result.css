@@ -64,7 +64,7 @@ aside {
 
 /* INFORMAZIONI FOOTER */
 
-footer {
+section {
   text-align: center;
   margin-top: 2em;
 }
@@ -95,7 +95,7 @@ button:hover {
   }
 }
 
-a {
+button a {
   text-decoration: none;
   color: #e8e7ec;
 }
