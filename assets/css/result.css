@@ -1,12 +1,9 @@
+/* INFORMAZIONI GENERALI */
+
 html {
   background-image: url('../img/bg.jpg');
   color: #e8e7ec;
   background-size: cover;
-}
-
-img {
-  width: 15%;
-  height: auto;
 }
 
 body {
@@ -16,10 +13,33 @@ body {
   padding-right: 125px;
 }
 
+/* LOGO */
+
+img {
+  width: 15%;
+  height: auto;
+}
+
+/* TITOLO */
+
 .title {
   margin-top: 2em;
   text-align: center;
 }
+
+.title h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.title p {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* INFORMAZIONI ASIDE */
 
 aside {
   display: flex;
@@ -28,10 +48,26 @@ aside {
   align-items: center;
 }
 
+#left {
+  font-family: 'Outfit', sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+}
+
+#right {
+  font-family: 'Outfit', sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+}
+
+/* INFORMAZIONI FOOTER */
+
 footer {
   text-align: center;
   margin-top: 2em;
 }
+
+/* INFORMAZIONI BOTTONE */
 
 button {
   background-image: url('../img/bg.jpg');
@@ -40,6 +76,7 @@ button {
   border: solid 2px;
   height: 57px;
   width: 216px;
-  font-size: bold;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
   font-size: 18px;
 }
