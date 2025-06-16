@@ -2,6 +2,7 @@
 html {
   margin: 0;
   height: 100%;
+  width: 100%;
   padding: 0;
 }
 /* BODY */
@@ -13,6 +14,9 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 /* HEADER */
 header {
@@ -35,7 +39,7 @@ main {
   padding: 20px; /* Un po' di spazio intorno al contenuto */
 }
 /* LOGO */
-img {
+header img {
   width: 10%; /* o la larghezza desiderata in pixel, percentuale, ecc. */
   height: auto; /* per mantenere le proporzioni */
   padding-top: 50px;
@@ -46,11 +50,12 @@ h1 {
   color: #e8e7ec;
   font-family: outfit;
   font-size: 60px;
+  margin-bottom: 0;
 }
 p {
   color: #e8e7ec;
   font-family: inter;
-  font-size: 16px;
+  font-size: 20px;
 }
 /* Contenitore delle stelle */
 .stars-rating {
@@ -58,6 +63,7 @@ p {
   gap: 5px; /* Spazio tra le stelle, puoi regolare */
   justify-content: center; /* Centra le stelle */
   margin-top: 20px; /* Spazio sopra le stelle */
+  margin-bottom: 60px; /* Spazio sotto le stelle */
 }
 /* Stile per ogni singola stella (span) */
 .stars {
@@ -69,12 +75,13 @@ p {
 .star-image {
   width: 100%; /* Fa sì che l'immagine occupi tutta la span */
   height: 100%; /* Fa sì che l'immagine occupi tutta la span */
-  filter: sepia(100%) hue-rotate(180deg) saturate(300%) brightness(15%);
+  fill: #0b113b;
+  stroke: white;
 }
 /* FORM */
 .comment-container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 800px;
   height: 120px;
   display: flex;
   align-items: center;
@@ -103,7 +110,7 @@ p {
 button {
   background-color: #00ffff; /* Colore di sfondo azzurro/verde brillante */
   color: #0b113b; /* Colore del testo scuro */
-  font-family: Outfit, sans-serif; /* Usa il font Outfit */
+  font-family: inter; /* Usa il font Outfit */
   font-size: 1.5rem; /* Dimensione del testo più grande */
   font-weight: bold; /* Testo in grassetto */
   padding: 15px 40px; /* Padding interno per dare volume al bottone */
@@ -134,7 +141,6 @@ footer {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(30px);
   box-shadow: 0 0 3px black; /* Colore di sfondo del footer */
-  border-top: solid 2px white; /* Bordo superiore per il footer */
   color: #fff; /* Colore del testo del footer */
   text-decoration: none; /* Rimuove la sottolineatura dal testo del footer */
 }
@@ -144,7 +150,7 @@ footer a {
   text-decoration: none; /* Rimuove la sottolineatura dal link */
 }
 footer a:hover {
-  color: #00eeff; /* Colore del link attivo nel footer */
+  color: #00ffff; /* Colore del link attivo nel footer */
   cursor: pointer; /* Cambia il cursore al passaggio del mouse */
-  text-decoration: underline; /* Sottolinea il link al passaggio del mouse */
+  text-decoration: none;
 }
