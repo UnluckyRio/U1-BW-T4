@@ -7,10 +7,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- TITLE -->
-    <title>Document</title>
+    <title>WELCOME</title>
     <!-- LINK CSS -->
     <!-- <link rel="stylesheet" href="../assets/css/reset.css" /> -->
-    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/welcome.css" />
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,9 +24,42 @@
   <!-- BODY -->
   <body>
     <!-- HEADER -->
-    <header></header>
+    <header><img src="../assets/img/epicode_logo.png" /></header>
     <!-- MAIN -->
-    <main></main>
+    <main>
+      <!-- MAIN TITLE -->
+      <h1 class="welcome">Welcome to</h1>
+      <h1 class="bold">your exam</h1>
+      <!-- SUBTITLE -->
+      <h3>Instructions</h3>
+      <!-- PARAGRAPH-->
+      <p>
+        We don't expect most engineers to know the answers to all of these<br />
+        questions, so don't worry if you're unsure of a few of them.
+      </p>
+      <!-- UNORDERED LIST-->
+      <ul>
+        <li>
+          Each question is <strong>timed</strong> and can only be
+          <strong>answered once</strong>.
+        </li>
+        <li>
+          Changing browser tab or opening other windows will invalidate the
+          question.
+        </li>
+        <li>This exam will take approx. <strong>0-5 minutes</strong>.</li>
+      </ul>
+      <form>
+        <!-- CHECKBOX -->
+        <input type="checkbox" class="checkbox" />
+
+        <label for="checkbox"
+          >I promise to answer myself without help from anyone</label
+        >
+        <!-- BUTTON -->
+        <button class="button-proceed">PROCEED</button>
+      </form>
+    </main>
     <!-- FOOTER -->
     <footer></footer>
   </body>
