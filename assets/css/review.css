@@ -76,7 +76,7 @@ p {
   width: 100%; /* Fa sì che l'immagine occupi tutta la span */
   height: 100%; /* Fa sì che l'immagine occupi tutta la span */
   fill: #0b113b;
-  stroke: white;
+  stroke: #e8e7ec;
 }
 /* FORM */
 .comment-container {
