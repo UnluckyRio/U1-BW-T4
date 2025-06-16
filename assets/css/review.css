@@ -1,0 +1,150 @@
+/* HTML */
+html {
+  margin: 0;
+  height: 100%;
+  padding: 0;
+}
+/* BODY */
+body {
+  background: url(../img/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/* HEADER */
+header {
+  width: 100%; /* Occupa tutta la larghezza */
+  padding: 50px 0 0 125px; /* Mantieni i tuoi padding per il logo */
+}
+header img {
+  width: 10%; /* Il tuo logo */
+  height: auto;
+  /* Rimuovi i padding top/left da qui, sono già sull'header */
+}
+/* MAIN */
+main {
+  display: flex;
+  flex-direction: column; /* Organizza il contenuto interno in colonna */
+  justify-content: center; /* Centra verticalmente il contenuto all'interno del main */
+  align-items: center; /* Centra orizzontalmente il contenuto all'interno del main */
+  flex-grow: 1; /* Il main occupa tutto lo spazio verticale disponibile */
+  text-align: center; /* Centra il testo di base all'interno del main */
+  padding: 20px; /* Un po' di spazio intorno al contenuto */
+}
+/* LOGO */
+img {
+  width: 10%; /* o la larghezza desiderata in pixel, percentuale, ecc. */
+  height: auto; /* per mantenere le proporzioni */
+  padding-top: 50px;
+  padding-left: 125px;
+}
+/* TEXT */
+h1 {
+  color: #e8e7ec;
+  font-family: outfit;
+  font-size: 60px;
+}
+p {
+  color: #e8e7ec;
+  font-family: inter;
+  font-size: 16px;
+}
+/* Contenitore delle stelle */
+.stars-rating {
+  display: flex; /* Le allinea orizzontalmente */
+  gap: 5px; /* Spazio tra le stelle, puoi regolare */
+  justify-content: center; /* Centra le stelle */
+  margin-top: 20px; /* Spazio sopra le stelle */
+}
+/* Stile per ogni singola stella (span) */
+.stars {
+  width: 50px; /* Dimensione della stella, puoi regolare */
+  height: 50px; /* Dimensione della stella, puoi regolare */
+  cursor: pointer; /* Indica che sono cliccabili */
+}
+/* Stile per l'immagine SVG all'interno della span */
+.star-image {
+  width: 100%; /* Fa sì che l'immagine occupi tutta la span */
+  height: 100%; /* Fa sì che l'immagine occupi tutta la span */
+  filter: sepia(100%) hue-rotate(180deg) saturate(300%) brightness(15%);
+}
+/* FORM */
+.comment-container {
+  width: 90%;
+  max-width: 1200px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  box-sizing: border-box;
+  margin: 20px auto;
+}
+.comment-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 24px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #e0007e;
+  text-indent: 35px; /* Aggiunto il rientro del testo per allineare la linea sotto il "W" */
+  /* Puoi sperimentare con questo valore per ottenere l'allineamento perfetto */
+}
+
+/* Stile per il placeholder */
+.comment-input::placeholder {
+  color: #5f616d; /* Colore più chiaro per il placeholder */
+}
+/* Stile del Bottone "MORE INFO" */
+button {
+  background-color: #00ffff; /* Colore di sfondo azzurro/verde brillante */
+  color: #0b113b; /* Colore del testo scuro */
+  font-family: Outfit, sans-serif; /* Usa il font Outfit */
+  font-size: 1.5rem; /* Dimensione del testo più grande */
+  font-weight: bold; /* Testo in grassetto */
+  padding: 15px 40px; /* Padding interno per dare volume al bottone */
+  border: none; /* Rimuovi il bordo predefinito */
+  cursor: pointer; /* Cambia il cursore in un puntatore al passaggio del mouse */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transizione per effetti hover */
+  margin-top: 30px; /* Spazio sopra il bottone */
+  box-shadow: 0px 0px 35px 15px #00ffffbc; /* Ombra per dare profondità */
+}
+button:hover {
+  transform: translateY(
+    -5px
+  ); /* Un leggero sollevamento al passaggio del mouse */
+}
+button a {
+  text-decoration: none; /* Rimuove la sottolineatura dal link all'interno del bottone */
+  color: inherit; /* Il testo del link eredita il colore dal bottone */
+}
+/* FOOTER */
+footer {
+  width: 100%; /* Larghezza del footer */
+  text-align: center; /* Centra il testo del footer */
+  padding: 10px; /* Padding interno per il footer */
+  font-family: inter; /* Font del footer */
+  font-size: 1rem; /* Dimensione del testo del footer */
+  margin-top: auto; /* Spinge il footer in fondo alla pagina */
+  position: relative; /* Posizione relativa per il footer */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  box-shadow: 0 0 3px black; /* Colore di sfondo del footer */
+  border-top: solid 2px white; /* Bordo superiore per il footer */
+  color: #fff; /* Colore del testo del footer */
+  text-decoration: none; /* Rimuove la sottolineatura dal testo del footer */
+}
+/* Footer <a> style */
+footer a {
+  color: #fff; /* Colore del link nel footer */
+  text-decoration: none; /* Rimuove la sottolineatura dal link */
+}
+footer a:hover {
+  color: #00eeff; /* Colore del link attivo nel footer */
+  cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+  text-decoration: underline; /* Sottolinea il link al passaggio del mouse */
+}
