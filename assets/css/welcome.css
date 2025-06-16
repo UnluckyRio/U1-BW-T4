@@ -4,9 +4,8 @@ body {
   height: 100%;
   margin: 0;
 }
-
 body {
-  background-image: url("../img/bg.jpg");
+  background: url("../img/bg.jpg");
   min-width: 100%;
   min-height: 100%;
   max-height: 100%;
@@ -15,7 +14,6 @@ body {
   background-position: center;
   padding-left: 125px;
 }
-
 main {
   display: flex;
   flex-direction: column;
@@ -33,14 +31,12 @@ h1 {
   padding-bottom: 0px;
   margin: 0;
 }
-
 h3 {
   color: #c2128d;
   font-size: 30px;
   position: relative;
   top: -50px;
 }
-
 /* TEXTS */
 p {
   font-family: Inter;
@@ -50,7 +46,6 @@ p {
   position: relative;
   top: -75px;
 }
-
 ul,
 li {
   font-family: Inter;
