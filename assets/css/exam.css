@@ -25,7 +25,10 @@ header img {
   position: relative;
 }
 
-.question-section h1 {
+/* Question */
+#question {
+  color: #e8e7ec;
+  font-family: outfit;
   font-size: 60px;
   font-family: "Outfit", sans-serif;
   margin-bottom: 65px;
@@ -62,18 +65,22 @@ button.answer-btn:hover {
 .options button:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
+button.answer-btn.wrong {
+  background: #e0007e;
+  border-color: #e0007e;
+  color: #e8e7ec;
+}
 
-.timer-container {
-  position: fixed;
-  top: 50px;
-  right: 100px;
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Outfit", sans-serif;
-  font-size: 26px;
+/* Progress */
+#progress {
+  margin-top: 40px;
+  font-family: inter;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #e8e7ec;
+  text-transform: uppercase;
+}
+#progress span {
   font-weight: bold;
   color: white;
 }
@@ -88,14 +95,14 @@ footer {
   width: 100%; /* Larghezza del footer */
   text-align: center; /* Centra il testo del footer */
   padding: 10px; /* Padding interno per il footer */
-  font-family: inter; /* Font del footer */
+  font-family: "inter", sans-serif; /* Font del footer */
   font-size: 20px; /* Dimensione del testo del footer */
   margin-top: auto; /* Spinge il footer in fondo alla pagina */
   position: relative; /* Posizione relativa per il footer */
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(30px);
   box-shadow: 0 0 3px black; /* Colore di sfondo del footer */
-  border-top: solid 2px white; /* Bordo superiore per il footer */
+  border-top: solid 2px #e8e7ec; /* Bordo superiore per il footer */
   color: #e8e7ec; /* Colore del testo del footer */
   text-decoration: none; /* Rimuove la sottolineatura dal testo del footer */
 }
