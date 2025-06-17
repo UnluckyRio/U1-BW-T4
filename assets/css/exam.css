@@ -125,7 +125,8 @@ button.answer-btn.wrong {
 }
 #slash,
 #total {
-  color: #e0007e;}
+  color: #e0007e;
+}
 /* Progress */
 /* FOOTER */
 footer {
@@ -152,4 +153,32 @@ footer a:hover {
   color: #00eeff; /* Colore del link attivo nel footer */
   cursor: pointer; /* Cambia il cursore al passaggio del mouse */
   text-decoration: none; /* Sottolinea il link al passaggio del mouse */
+}
+.timer-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.timer-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.timer-text {
+  z-index: 1;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+svg {
+  position: absolute;
 }
