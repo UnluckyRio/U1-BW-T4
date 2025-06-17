@@ -30,24 +30,11 @@ body {
   padding: 0;
 }
 
-/* Container */
-#quiz-container {
-  width: 800px;
-  max-width: 90%;
-  border-radius: 20px;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* centra verticalmente il contenuto interno */
-  align-items: center; /* centra orizzontalmente */
-  height: 80vh; /* o 100vh meno eventuale header/footer */
-  box-sizing: border-box;
-}
-
 /* Question */
 #question {
   color: #e8e7ec;
   font-family: "outfit", sans-serif;
+  font-family: outfit;
   font-size: 60px;
   text-align: center;
   margin-bottom: 30px;
@@ -74,6 +61,12 @@ button.answer-btn {
 }
 button.answer-btn:hover {
   border-color: #e8e7ec;
+}
+
+button.answer-btn.wrong {
+  background: #e0007e;
+  border-color: #e0007e;
+  color: #e8e7ec;
 }
 
 button.answer-btn.correct {
@@ -110,8 +103,8 @@ button.answer-btn.wrong {
 }
 #slash,
 #total {
-  color: #e0007e;
-}
+  color: #e0007e;}
+/* Progress */
 /* FOOTER */
 footer {
   width: 100%; /* Larghezza del footer */
