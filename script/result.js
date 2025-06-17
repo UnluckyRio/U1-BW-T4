@@ -21,16 +21,16 @@ window.addEventListener('DOMContentLoaded', () => {
     if (corretti > sbagliati) {
       return {
         // Eseguo questa
-        text: "Congratulations!\nYou passed the exam.\nWe'll send you the \ncertificate in few minutes.\nCheck your email \n(including promotions / \nspam folder)",
+        text: "Congratulations!\n\nYou passed the exam.\nWe'll send you the \ncertificate in few minutes.\nCheck your email \n(including promotions / \nspam folder)",
         color: 'white', // Colore testo
-        font: 'bold 20px Arial', // Font
+        font: '20px Inter', // Font
       };
     } else {
       return {
         // Eseguo questa
-        text: "Unfortunately\nYou didn't passed\nthe exam!\nRetry",
+        text: "Unfortunately\n\nYou didn't passed\nthe exam!\n\nRetry",
         color: 'white', // Colore testo
-        font: 'bold 20px Outfit', // Font
+        font: '20px Inter', // Font
       };
     }
   }
@@ -46,7 +46,7 @@ window.addEventListener('DOMContentLoaded', () => {
       ],
     },
     options: {
-      cutout: '70%', // Formato del grafico
+      cutout: '75%', // Formato del grafico
     },
     plugins: [
       {
@@ -106,7 +106,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // WRONG RESULT
 
   // Creo una funzione che mostri le rosposte sbagliate in HTML
-  const wrong = function () {
+  const wrong = () => {
     const wrong_results = document.getElementById('right');
     // Creo 2 elementi (h2, p)
     const h2 = document.createElement('h2');
