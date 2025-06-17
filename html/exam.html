@@ -7,10 +7,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- TITLE -->
-    <title>Document</title>
+    <title>PokéQuiz - EPICODE</title>
     <!-- LINK CSS -->
     <!-- <link rel="stylesheet" href="../assets/css/reset.css" /> -->
-    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/exam.css" />
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,14 +24,29 @@
   <!-- BODY -->
   <body>
     <!-- HEADER -->
-    <header></header>
+    <header>
+      <img id="logo" src="../assets/img/epicode_logo.png" alt="Logo-EPICODE" />
+    </header>
     <!-- MAIN -->
-    <main></main>
+    <main>
+      <div id="quiz-container">
+        <!-- questo wrapper serve per poterlo nascondere -->
+        <div id="question-container">
+          <div id="question"></div>
+          <div id="answers"></div>
+        </div>
+        <!-- progress tracker -->
+        <div id="progress">
+          QUESTION <span id="current"></span> <span id="slash"> / </span>
+          <span id="total"></span>
+        </div>
+      </div>
+    </main>
     <!-- FOOTER -->
     <footer>
       <!-- Link al mio GitHub -->
       <a href="https://github.com/UnluckyRio/U1-BW-T4" target="_blank"
-        >Realizzato dal Team 4
+        >Realizzato dal Team 4 "The Merger"
       </a>
     </footer>
   </body>
