@@ -30,6 +30,20 @@ body {
   padding: 0;
 }
 
+/* Container */
+#quiz-container {
+  width: 800px;
+  max-width: 90%;
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente il contenuto interno */
+  align-items: center; /* centra orizzontalmente */
+  height: 80vh; /* o 100vh meno eventuale header/footer */
+  box-sizing: border-box;
+}
+
 /* Question */
 #question {
   color: #e8e7ec;
@@ -96,6 +110,14 @@ button.answer-btn.wrong {
 /* Score display */
 #score-container {
   text-align: center;
+}
+#score-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+#slash,
+#total {
+  color: #e0007e;
 }
 #score-container h2 {
   font-size: 2.5rem;
