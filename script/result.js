@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Funzione del testo centrale
   function testoCentrale() {
     // Chiedo se il risultato è maggiore
-    if (corretti >= sbagliati) {
+    if (corretti > sbagliati) {
       return {
         // Eseguo questa
         text: "Congratulations!\nYou passed the exam.\nWe'll send you the \ncertificate in few minutes.\nCheck your email \n(including promotions / \nspam folder)",
