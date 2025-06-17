@@ -161,3 +161,58 @@ footer a:hover {
   cursor: pointer; /* Cambia il cursore al passaggio del mouse */
   text-decoration: none; /* Sottolinea il link al passaggio del mouse */
 }
+.timer-container {
+  position: fixed;
+  top: 50px;
+  right: 200px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.timer-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.timer-text {
+  z-index: 1;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+}
+
+svg {
+  position: absolute;
+}
+.number {
+  z-index: 1;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.label {
+  font-size: 8px;
+  font-weight:normal;
+  opacity: 0.7;
+  color: white;
+  line-height: 0.5;
+}
+
+.label.top {
+margin-top: 35px;
+}
+
+.label.bottom {
+  margin-bottom: 35px;
+}

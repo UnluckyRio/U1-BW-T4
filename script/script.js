@@ -124,6 +124,7 @@ function showQuestion() {
 
 // Gestione della selezione di una risposta
 function selectAnswer(button, isCorrect) {
+  clearInterval(timerInterval);
   if (isCorrect) {
     score++;
     button.classList.add('correct');
@@ -138,6 +139,7 @@ function selectAnswer(button, isCorrect) {
   setTimeout(() => {
     questionNumber++;
     showQuestion();
+    startTimer();
   }, 1000);
 }
 
@@ -149,5 +151,46 @@ window.addEventListener('DOMContentLoaded', () => {
   // Avvio il quiz
   showQuestion();
 });
+const timerText = document.getElementById('timer');
+const progressCircle = document.getElementById('progress-circle');
+const circumference = 2 * Math.PI * 45; // r=45
+progressCircle.style.strokeDasharray = circumference;
 
-// ====================================================================================
+let totalTime = 30;
+let timeLeft = totalTime;
+let timerInterval;
+
+function updateCircle(progress) {
+  const offset = circumference * -progress;
+  progressCircle.style.strokeDashoffset = offset;
+}
+
+function startTimer() {
+  clearInterval(timerInterval);
+  timeLeft = totalTime;
+  timerText.textContent = timeLeft;
+  updateCircle(0);
+
+  timerInterval = setInterval(() => {
+    timeLeft--;
+    if (timeLeft <= 0) {
+      clearInterval(timerInterval);
+      goToNextQuestion();
+    }
+    timerText.textContent = timeLeft;
+    updateCircle((totalTime - timeLeft) / totalTime);
+  }, 1000);
+}
+
+startTimer();
+
+document.getElementById('next-btn').addEventListener('click', () => {
+  startTimer();
+  alert('Next question');
+});
+function goToNextQuestion() {
+  questionNumber++;
+  showQuestion();
+  startTimer();
+}
+showQuestion();
