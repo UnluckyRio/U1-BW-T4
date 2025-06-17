@@ -89,7 +89,7 @@ function shuffle(array) {
 function showQuestion() {
   // Se ho esaurito le domande, mostro il risultato
   if (questionNumber >= questions.length) {
-    window.location.href = "../html/result.html";
+    window.location.href = "../html/result.html?score";
     return;
   }
 
