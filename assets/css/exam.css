@@ -70,6 +70,7 @@ button.answer-btn {
   font-size: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
+  box-shadow: 0 -4px 8px rgb(246, 244, 244);
 }
 button.answer-btn:hover {
   border-color: #e8e7ec;
@@ -135,5 +136,5 @@ footer a {
 footer a:hover {
   color: #00eeff; /* Colore del link attivo nel footer */
   cursor: pointer; /* Cambia il cursore al passaggio del mouse */
-  text-decoration: underline; /* Sottolinea il link al passaggio del mouse */
+  text-decoration: none; /* Sottolinea il link al passaggio del mouse */
 }

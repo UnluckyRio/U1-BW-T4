@@ -1,28 +1,43 @@
-/* HTML E BODY */
-html,
-body {
-  height: 100%;
+/* HTML E BODY E MAIN */
+html {
   margin: 0;
+  height: 100%;
+  width: 100%;
+  padding: 0;
 }
 body {
-  background: url("../img/bg.jpg");
-  min-width: 100%;
-  min-height: 100%;
-  max-height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding-left: 125px;
-}
-main {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: url(../img/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+main {
+  flex: 1; /* Occupa tutto lo spazio disponibile tra header e footer */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra orizzontalmente */
+  text-align: center;
 }
 /* HEADERS */
+
+/* Logo */
+#logo {
+  padding-top: 50px;
+  padding-left: 125px;
+  height: auto;
+  width: 10%;
+}
+
 h1,
 h3 {
-  font-family: Outfit, sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 h1 {
@@ -46,10 +61,12 @@ p {
   position: relative;
   top: -75px;
 }
+
 ul,
 li {
-  font-family: Inter;
-  font-size: 16px;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
   color: #e8e7ec;
   padding-top: 10px;
   position: relative;
@@ -58,8 +75,8 @@ li {
 }
 
 label {
-  font-family: Inter;
-  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
   color: #e8e7ec;
   position: relative;
   top: -30px;
@@ -86,7 +103,7 @@ label {
   position: relative;
   width: 17px;
   height: 17px;
-  border: 2px solid white;
+  border: 2px solid #e8e7ec;
   background-color: transparent;
   cursor: pointer;
   position: relative;
@@ -94,20 +111,20 @@ label {
   left: -30px;
   cursor: pointer;
   background-color: transparent;
-  color: white;
+  color: #e8e7ec;
   background-color: transparent;
-  border: 2px solid white;
+  border: 2px solid #e8e7ec;
 }
 
 .checkbox::after {
   appearance: none;
-  background-color: white;
+  background-color: #e8e7ec;
   width: 100%;
   height: 100%;
 }
 
 .checkbox:checked {
-  background-color: white;
+  background-color: #e8e7ec;
 }
 
 /* BUTTON */
@@ -136,36 +153,29 @@ button a {
   color: inherit;
 }
 
-/* BACKGROUND IMAGE */
-header > img {
-  width: 150px;
-  height: auto;
-  padding-top: 50px;
-  padding-bottom: 40px;
-}
-
 /* FOOTER */
 footer {
   width: 100%; /* Larghezza del footer */
   text-align: center; /* Centra il testo del footer */
   padding: 10px; /* Padding interno per il footer */
-  font-family: inter; /* Font del footer */
-  font-size: 1rem; /* Dimensione del testo del footer */
+  font-family: "inter", sans-serif; /* Font del footer */
+  font-size: 20px; /* Dimensione del testo del footer */
   margin-top: auto; /* Spinge il footer in fondo alla pagina */
   position: relative; /* Posizione relativa per il footer */
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(30px);
   box-shadow: 0 0 3px black; /* Colore di sfondo del footer */
+  border-top: solid 2px #e8e7ec; /* Bordo superiore per il footer */
   color: #e8e7ec; /* Colore del testo del footer */
   text-decoration: none; /* Rimuove la sottolineatura dal testo del footer */
 }
-/* Footer <a> style */
+/* Footer <a/> style */
 footer a {
   color: #e8e7ec; /* Colore del link nel footer */
   text-decoration: none; /* Rimuove la sottolineatura dal link */
 }
 footer a:hover {
-  color: #00ffff; /* Colore del link attivo nel footer */
+  color: #00eeff; /* Colore del link attivo nel footer */
   cursor: pointer; /* Cambia il cursore al passaggio del mouse */
-  text-decoration: none;
+  text-decoration: none; /* Sottolinea il link al passaggio del mouse */
 }
