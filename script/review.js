@@ -16,6 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     star.addEventListener("click", function () {
       const value = parseInt(this.dataset.value);
       updateRating(value);
+      //   console.log(`Stelle selezionate: ${value}`);
     });
 
     starsRating.appendChild(star);

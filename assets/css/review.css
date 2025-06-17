@@ -78,6 +78,11 @@ p {
   fill: #0b113b;
   stroke: #e8e7ec;
 }
+/* Stile per quando una stella è selezionata */
+.stars.selected .star-image {
+  fill: #00ffff;
+  stroke: #00ffff;
+}
 /* FORM */
 .comment-container {
   width: 90%;
