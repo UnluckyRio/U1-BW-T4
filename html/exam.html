@@ -27,10 +27,15 @@
     <img src="../assets/img/epicode_logo.png" class="logo" />
     </header>
     <main>
+    <div class="timer-container">
+    <svg class="timer-circle" width="80" height="80">
+    <circle cx="40" cy="40" r="36" stroke="#900080" stroke-width="8" fill="none"/>
+    <circle id="progress" cx="40" cy="40" r="36" stroke="#00FFFF" stroke-width="8" fill="none"
+    stroke-dasharray="226" stroke-dashoffset="0" transform="rotate(-90 40 40)" />
+  </svg>
+  <div class="timer-text" id="timer">30</div>
+</div>
       <div class="quiz-container">
-        <div class="timer">
-          <div class="circle"></div>
-        </div>
         <div class="question-section">
           <h1>How can I create a <strong>checkbox in HTML?</strong></h1>
           <div class="options">
@@ -40,7 +45,10 @@
             <button>&lt;input type="button"&gt;</button>
           </div>
         </div>
-        <div class="footer"> QUESTION</div>
+        </div>
+        <div class="question-progress">
+  <span id="question-index">Question 1 / 10</span>
+</div>
       </div>
     </main>
   </body>
