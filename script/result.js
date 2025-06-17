@@ -1,7 +1,8 @@
 /* SCRIPT DEL RESULTS */
 
-// Inidirizzo al sito locale
+// Richiamo con un'evento listener l'altro script
 window.addEventListener('DOMContentLoaded', () => {
+  // Inidirizzo al sito locale
   const resultsDonut = new URLSearchParams(window.location.search);
   // Salvo in una variabile gli score corretti
   const corretti = parseInt(resultsDonut.get('score'), 10);
@@ -14,6 +15,25 @@ window.addEventListener('DOMContentLoaded', () => {
   const datiDonut = [sbagliati, corretti]; // Dati del donut
   // Grafico donut
   const ctx = document.getElementById('myDonutChart').getContext('2d');
+  // Funzione del testo centrale
+  function testoCentrale() {
+    // Chiedo se il risultato è maggiore
+    if (corretti >= sbagliati) {
+      return {
+        // Eseguo questa
+        text: "Congratulations!\nYou passed the exam.\nWe'll send you the \ncertificate in few minutes.\nCheck your email \n(including promotions / \nspam folder)",
+        color: 'white', // Colore testo
+        font: 'bold 20px Arial', // Font
+      };
+    } else {
+      return {
+        // Eseguo questa
+        text: "Unfortunately\nYou didn't passed\nthe exam!\nRetry",
+        color: 'white', // Colore testo
+        font: 'bold 20px Outfit', // Font
+      };
+    }
+  }
   const myDonutChart = new Chart(ctx, {
     type: 'doughnut', // Scelgo il tipo di grafico che voglio visualizzare
     data: {
@@ -27,17 +47,43 @@ window.addEventListener('DOMContentLoaded', () => {
     },
     options: {
       cutout: '70%', // Formato del grafico
-      plugins: {
-        centerText: {
-          text: 'Ciao',
-          color: ' #900080',
+    },
+    plugins: [
+      {
+        id: 'centerText', // Identificoi il nome del plugin
+        afterDraw: (chart) => {
+          // Riprendo testo, colore e font dalla funzione fatta in precedenza
+          const { text, color, font } = testoCentrale();
+          const ctx = chart.ctx;
+          ctx.save(); // Salvo il donut allo stato corrente
+          // Imposto font, colore, allineamento orizzontale e verticale
+          ctx.font = font;
+          ctx.fillStyle = color;
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          const lines = text.split('\n'); // Divido il testo in più righe
+          const lineHeight = 22; // Modifica per adattare il font
+          // Trova il centro del grafico
+          const centerY = chart.getDatasetMeta(0).data[0].y;
+          const centerX = chart.getDatasetMeta(0).data[0].x;
+          // Calcola l'altezza totale del blocco di testo
+          const totalHeight = lineHeight * lines.length;
+          // Per ogni riga, la disegna centrata
+          lines.forEach((line, i) => {
+            ctx.fillText(
+              line, // Testo della riga
+              centerX, // Posizione X (centro)
+              centerY - totalHeight / 2 + i * lineHeight + lineHeight / 2 // Posizione Y, centrata
+            );
+          });
+          ctx.restore(); // Ripristino lo stato del canvas
         },
       },
-    },
-    plugins: [CenterTextPlugin],
+    ],
   });
 
-  // Correct Results
+  // CORRECT RESULTS
+
   // Creo una funzione che mostri le risposte corrette in HTML
   const correct = () => {
     const correct_results = document.getElementById('left');
@@ -57,7 +103,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // Richiamo la funzione
   correct();
 
-  // Wrong Resutls
+  // WRONG RESULT
+
   // Creo una funzione che mostri le rosposte sbagliate in HTML
   const wrong = function () {
     const wrong_results = document.getElementById('right');
