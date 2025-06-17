@@ -155,7 +155,7 @@ const progressCircle = document.getElementById("progress-circle");
 const circumference = 2 * Math.PI * 45; // r=45
 progressCircle.style.strokeDasharray = circumference;
 
-let totalTime = 60;
+let totalTime = 30;
 let timeLeft = totalTime;
 let timerInterval;
 
