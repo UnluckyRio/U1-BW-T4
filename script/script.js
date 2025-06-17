@@ -170,52 +170,55 @@ const ctx = document.getElementById('myDonutChart').getContext('2d');
 const myDonutChart = new Chart(ctx, {
   type: 'doughnut', // Scelgo il tipo di grafico che voglio visualizzare
   data: {
-    labels: [],
     datasets: [
       {
-        data: datiDonut,
+        data: datiDonut, // Mostro nel grafico il risultato
         backgroundColor: [' #900080', '#0ff'], // Font del grafico
-        borderWidth: 0,
+        borderWidth: 0, // Bordi del grafico (di default sono visibili)
       },
     ],
   },
   options: {
-    cutout: '70%',
-    plugins: {
-      legend: { display: true },
-    },
+    cutout: '70%', // Formato del grafico
   },
 });
 
 // Correct Results
 const correct_results = document.getElementById('left');
+// Creo una funzione che mostri le risposte corrette in HTML
 const correct = () => {
+  // Creo 2 elementi (h1, p)
   const h2 = document.createElement('h2');
   const p = document.createElement('p');
-
+  // Faccio la percentuale di risposte giuste
   const percentuale = Math.round((corretti / totale) * 100);
+  // Mostro la percentuale di risposte corrette
   h2.textContent = `${percentuale} %`;
+  // Mostro il numero di risposte corrette su risposte totali
   p.textContent = `${corretti} / ${totale} Questions`;
-
+  // Appendo il padre ai suoi rispettivi figli
   correct_results.appendChild(h2);
   correct_results.appendChild(p);
 };
-
+// Richiamo la funzione
 correct();
+
 // Wrong Resutls
-
 const incorrect_results = document.getElementById('right ');
-const wrong_results = document.getElementById('right');
-
+// Creo una funzione che mostri le rosposte sbagliate in HTML
 const wrong = () => {
+  // Creo 2 elementi (h2, p)
   const h2 = document.createElement('h2');
   const p = document.createElement('p');
+  // Faccio la percentuale di risposte sbagliate
   const percentuale = Math.round((sbagliati / totale) * 100);
+  // Mostro la percentuale di risposte sbaglaite
   h2.textContent = `${percentuale} %`;
+  // Mostro il numero di risposte sbagliate su risposte totali
   p.textContent = `${sbagliati} / ${totale} Questions`;
-
+  // Appendo i figli rispettivi al padre
   wrong_results.appendChild(h2);
   wrong_results.appendChild(p);
 };
-
+// Richiamo la funzione
 wrong();

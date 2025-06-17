@@ -1,5 +1,4 @@
 /* INFORMAZIONI GENERALI */
-
 html {
   background-image: url('../img/bg.jpg');
   color: #e8e7ec;
@@ -14,14 +13,12 @@ body {
 }
 
 /* LOGO */
-
 img {
   width: 15%;
   height: auto;
 }
 
 /* TITOLO */
-
 .title {
   margin-top: 2em;
   text-align: center;
@@ -41,7 +38,6 @@ img {
 }
 
 /* INFORMAZIONI ASIDE */
-
 aside {
   display: flex;
   margin-top: 2em;
