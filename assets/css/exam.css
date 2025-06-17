@@ -76,6 +76,12 @@ button.answer-btn:hover {
   border-color: #e8e7ec;
 }
 
+button.answer-btn.wrong {
+  background: #e0007e;
+  border-color: #e0007e;
+  color: #e8e7ec;
+}
+
 button.answer-btn.correct {
   background: #0ff;
   border-color: #0ff;
@@ -112,6 +118,23 @@ button.answer-btn.wrong {
 #total {
   color: #e0007e;
 }
+#score-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+#slash,
+#total {
+  color: #e0007e;
+}
+#score-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+#slash,
+#total {
+  color: #e0007e;
+}
+/* Progress */
 /* FOOTER */
 footer {
   width: 100%; /* Larghezza del footer */
