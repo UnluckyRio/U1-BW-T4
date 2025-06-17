@@ -165,6 +165,7 @@ const sbagliati = totale - corretti;
 
 // Ciambella results
 const datiDonut = [sbagliati, corretti]; // Dati del donut
+// Grafico donut
 const ctx = document.getElementById('myDonutChart').getContext('2d');
 const myDonutChart = new Chart(ctx, {
   type: 'doughnut', // Scelgo il tipo di grafico che voglio visualizzare
@@ -174,11 +175,12 @@ const myDonutChart = new Chart(ctx, {
       {
         data: datiDonut,
         backgroundColor: [' #900080', '#0ff'], // Font del grafico
+        borderWidth: 0,
       },
     ],
   },
   options: {
-    cutout: '75%',
+    cutout: '70%',
     plugins: {
       legend: { display: true },
     },
