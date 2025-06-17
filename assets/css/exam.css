@@ -1,94 +1,140 @@
-body {
+/* HTML */
+html {
   margin: 0;
-  font-family: "Inter", sans-serif;
-  background-image: url(../img/bg.jpg);
-  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+/* Logo */
+#logo {
+  padding-top: 50px;
+  padding-left: 125px;
+  height: auto;
+  width: 10%;
+}
+
+/* BODY */
+body {
+  background: url(../img/bg.jpg);
   background-size: cover;
-  color: white;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-header img {
- position: fixed;
-    top: 60px;
-    left: 70px;
-    width: 200px;
-}
-
-.quiz-container {
-  width: 700px;
+/* Container */
+#quiz-container {
+  width: 800px;
+  max-width: 90%;
+  border-radius: 20px;
   padding: 40px;
-  text-align: center;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente il contenuto interno */
+  align-items: center; /* centra orizzontalmente */
+  height: 80vh; /* o 100vh meno eventuale header/footer */
+  box-sizing: border-box;
 }
 
-.question-section h1 {
+/* Question */
+#question {
+  color: #e8e7ec;
+  font-family: "outfit", sans-serif;
   font-size: 60px;
-  font-family: "Outfit", sans-serif;
-  margin-bottom: 65px;
-  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
-.question-section h2 span {
-  color: #ffffff;
-  font-weight: bold;
-}
-
-.options {
+/* Answers grid */
+#answers {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 
-.options button {
-  padding: 30px 20px;
-  border: none;
-  border-radius: 110px;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: white;
-  font-size: 16px;
+button.answer-btn {
+  padding: 15px 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
+  background: transparent;
+  color: #e8e7ec;
+  font-family: inter;
+  font-size: 20px;
   cursor: pointer;
-  font-family: "Inter", sans-serif;
   transition: all 0.3s ease;
   box-shadow: 0 -4px 8px rgb(246, 244, 244);
 }
-
-.options button:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+button.answer-btn:hover {
+  border-color: #e8e7ec;
 }
 
-.timer-container {
-  position: fixed;
-  top: 50px;
-  right: 100px;
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Outfit", sans-serif;
-  font-size: 26px;
-  font-weight: bold;
-  color: white;
+button.answer-btn.correct {
+  background: #0ff;
+  border-color: #0ff;
+  color: #0b0f2a;
+}
+button.answer-btn.wrong {
+  background: #e0007e;
+  border-color: #e0007e;
+  color: #e8e7ec;
 }
 
-.timer-circle {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.timer-text {
-  z-index: 1;
-}
-
-.question-progress {
-  text-align: center;
-  font-family: "Outfit", sans-serif;
+/* Progress */
+#progress {
+  margin-top: 40px;
+  font-family: "inter", sans-serif;
   font-size: 20px;
-  font-weight: 500;
-  color: white;
-  margin-top: 60px;}
+  letter-spacing: 2px;
+  color: #e8e7ec;
+  text-transform: uppercase;
+}
+#progress span {
+  font-weight: bold;
+}
+
+/* Score display */
+#score-container {
+  text-align: center;
+}
+#score-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+#slash,
+#total {
+  color: #e0007e;
+}
+/* FOOTER */
+footer {
+  width: 100%; /* Larghezza del footer */
+  text-align: center; /* Centra il testo del footer */
+  padding: 10px; /* Padding interno per il footer */
+  font-family: "inter", sans-serif; /* Font del footer */
+  font-size: 20px; /* Dimensione del testo del footer */
+  margin-top: auto; /* Spinge il footer in fondo alla pagina */
+  position: relative; /* Posizione relativa per il footer */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  box-shadow: 0 0 3px black; /* Colore di sfondo del footer */
+  border-top: solid 2px #e8e7ec; /* Bordo superiore per il footer */
+  color: #e8e7ec; /* Colore del testo del footer */
+  text-decoration: none; /* Rimuove la sottolineatura dal testo del footer */
+}
+/* Footer <a/> style */
+footer a {
+  color: #e8e7ec; /* Colore del link nel footer */
+  text-decoration: none; /* Rimuove la sottolineatura dal link */
+}
+footer a:hover {
+  color: #00eeff; /* Colore del link attivo nel footer */
+  cursor: pointer; /* Cambia il cursore al passaggio del mouse */
+  text-decoration: none; /* Sottolinea il link al passaggio del mouse */
+}
