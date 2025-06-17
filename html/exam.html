@@ -12,41 +12,44 @@
     <!-- <link rel="stylesheet" href="../assets/css/reset.css" /> -->
     <link rel="stylesheet" href="../assets/css/exam.css" />
     <!-- FONT -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/png" href="../assets/img/bg.jpg" />
+    <!-- ICONA -->
+    <link rel="icon" type="image/png" href="../assets/img/logo.jpg" />
   </head>
+  <!-- BODY -->
   <body>
+    <!-- HEADER -->
     <header>
       <img id="logo" src="../assets/img/epicode_logo.png" alt="Logo-EPICODE" />
     </header>
+    <!-- MAIN -->
     <main>
-    <div class="timer-container">
-    <svg class="timer-circle" width="80" height="80">
-    <circle cx="40" cy="40" r="36" stroke="#900080" stroke-width="8" fill="none"/>
-    <circle id="progress" cx="40" cy="40" r="36" stroke="#00FFFF" stroke-width="8" fill="none"
-    stroke-dasharray="226" stroke-dashoffset="0" transform="rotate(-90 40 40)" />
-  </svg>
-  <div class="timer-text" id="timer">30</div>
-</div>
-      <div class="quiz-container">
-        <div class="question-section">
-          <h1>How can I create a <strong>checkbox in HTML?</strong></h1>
-          <div class="options">
-            <button>&lt;input type="check"&gt;</button>
-            <button class="correct">&lt;input type="checkbox"&gt;</button>
-            <button>&lt;checkbox&gt;</button>
-            <button>&lt;input type="button"&gt;</button>
-          </div>
+      <div id="quiz-container">
+        <!-- questo wrapper serve per poterlo nascondere -->
+        <div id="question-container">
+          <div id="question"></div>
+          <div id="answers"></div>
         </div>
+        <!-- progress tracker -->
+        <div id="progress">
+          QUESTION <span id="current"></span> <span id="slash"> / </span>
+          <span id="total"></span>
         </div>
-        <div class="question-progress">
-  <span id="question-index">Question 1 / 10</span>
-        </div>
+      </div>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+      <!-- Link al mio GitHub -->
+      <a href="https://github.com/UnluckyRio/U1-BW-T4" target="_blank"
+        >Realizzato dal Team 4 "The Merger"
+      </a>
+    </footer>
   </body>
+  <!-- LINK JS -->
   <script src="../script/script.js"></script>
 </html>
