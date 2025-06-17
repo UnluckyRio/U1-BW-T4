@@ -48,7 +48,6 @@ body {
 #question {
   color: #e8e7ec;
   font-family: "outfit", sans-serif;
-  font-family: outfit;
   font-size: 60px;
   text-align: center;
   margin-bottom: 30px;
@@ -127,6 +126,14 @@ button.answer-btn.wrong {
 #total {
   color: #e0007e;
 }
+#score-container h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+#slash,
+#total {
+  color: #e0007e;
+}
 /* Progress */
 /* FOOTER */
 footer {
@@ -182,3 +189,4 @@ footer a:hover {
 svg {
   position: absolute;
 }
+

@@ -22,7 +22,7 @@ const questions = [
   },
   {
     type: "multiple",
-    question: "Quanti Pokémon compongono ufficialmente la Prima Generazione??",
+    question: "Quanti Pokémon compongono ufficialmente la Prima Generazione?",
     correct_answer: "151",
     incorrect_answers: ["121", "101", "131"],
   },
@@ -65,74 +65,74 @@ const questions = [
     correct_answer: "Splash",
     incorrect_answers: ["Azione", "Iper Raggio", "Pistolacqua"],
   },
-];
+]
 
-let score = 0;
-let questionNumber = 0;
+let score = 0
+let questionNumber = 0
 
 // Riferimenti agli elementi del DOM
-const questionContainer = document.getElementById("question-container");
-const questionEl = document.getElementById("question");
-const answersEl = document.getElementById("answers");
-const progressCurrent = document.getElementById("current");
-const progressTotal = document.getElementById("total");
-const scoreContainer = document.getElementById("score-container");
-const scoreEl = document.getElementById("score");
-const totalScoreEl = document.getElementById("total-score");
+const questionContainer = document.getElementById("question-container")
+const questionEl = document.getElementById("question")
+const answersEl = document.getElementById("answers")
+const progressCurrent = document.getElementById("current")
+const progressTotal = document.getElementById("total")
+const scoreContainer = document.getElementById("score-container")
+const scoreEl = document.getElementById("score")
+const totalScoreEl = document.getElementById("total-score")
 
 // Utility per mescolare l'array
 function shuffle(array) {
-  return array.sort(() => Math.random() - 0.5);
+  return array.sort(() => Math.random() - 0.5)
 }
 
 // Mostra la domanda corrente (o il punteggio finale)
 function showQuestion() {
   // Se ho esaurito le domande, mostro il risultato
   if (questionNumber >= questions.length) {
-    window.location.href = "../html/result.html?score";
-    return;
+    window.location.href = "../html/result.html?score"
+    return
   }
 
   // Aggiorno il tracker
-  progressCurrent.textContent = questionNumber + 1;
+  progressCurrent.textContent = questionNumber + 1
 
   // Preparo la domanda e le risposte
-  const q = questions[questionNumber];
-  questionEl.textContent = q.question;
+  const q = questions[questionNumber]
+  questionEl.textContent = q.question
 
-  let answers = [];
+  let answers = []
   if (q.type === "multiple") {
-    answers = shuffle([q.correct_answer, ...q.incorrect_answers]);
+    answers = shuffle([q.correct_answer, ...q.incorrect_answers])
   } else {
     // boolean
-    answers = ["True", "False"];
+    answers = ["True", "False"]
   }
 
   // Pulisco e ricreo i bottoni
-  answersEl.innerHTML = "";
+  answersEl.innerHTML = ""
   answers.forEach((ans) => {
-    const btn = document.createElement("button");
-    btn.classList.add("answer-btn");
-    btn.textContent = ans;
+    const btn = document.createElement("button")
+    btn.classList.add("answer-btn")
+    btn.textContent = ans
     btn.addEventListener("click", () =>
       selectAnswer(btn, ans === q.correct_answer)
-    );
-    answersEl.appendChild(btn);
-  });
+    )
+    answersEl.appendChild(btn)
+  })
 }
 
 // Gestione della selezione di una risposta
 function selectAnswer(button, isCorrect) {
   clearInterval(timerInterval);
   if (isCorrect) {
-    score++;
-    button.classList.add("correct");
+    score++
+    button.classList.add("correct")
   } else {
-    button.classList.add("wrong");
+    button.classList.add("wrong")
   }
 
   // Disabilito tutte le risposte per evitare doppie selezioni
-  document.querySelectorAll(".answer-btn").forEach((b) => (b.disabled = true));
+  document.querySelectorAll(".answer-btn").forEach((b) => (b.disabled = true))
 
   // Passo alla prossima dopo una pausa
   setTimeout(() => {
@@ -145,7 +145,7 @@ function selectAnswer(button, isCorrect) {
 // Setup iniziale al caricamento della pagina
 window.addEventListener("DOMContentLoaded", () => {
   // Imposto il totale per il tracker
-  progressTotal.textContent = questions.length;
+  progressTotal.textContent = questions.length
 
   // Avvio il quiz
   showQuestion();
@@ -192,3 +192,4 @@ function goToNextQuestion() {
   showQuestion();
   startTimer();
 }
+  showQuestion()
