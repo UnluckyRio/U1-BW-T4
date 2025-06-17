@@ -49,11 +49,27 @@ aside {
   align-items: center;
 }
 
-#left {
+/* SINISTRA CORRECT */
+
+#left h1 {
   font-family: 'Outfit', sans-serif;
   font-size: 60px;
   font-weight: 400;
 }
+
+#left h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+#left p {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+/* CENTRO TESTO AL CENTRO DEL DONUT */
 
 #testoInCentro {
   position: absolute;
@@ -66,11 +82,26 @@ aside {
   pointer-events: none;
 }
 
-#right {
+/* DESTRA WORNG */
+
+#right h1 {
   font-family: 'Outfit', sans-serif;
   font-size: 60px;
   font-weight: 400;
   color: #dcd2e1;
+}
+
+#right h2 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  color: #dcd2e1;
+}
+
+#right p {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
 }
 
 /* INFORMAZIONI FOOTER */

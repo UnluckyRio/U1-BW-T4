@@ -189,7 +189,33 @@ const myDonutChart = new Chart(ctx, {
 
 // Correct Results
 const correct_results = document.getElementById('left');
+const correct = () => {
+  const h2 = document.createElement('h2');
+  const p = document.createElement('p');
 
+  const percentuale = Math.round((corretti / totale) * 100);
+  h2.textContent = `${percentuale} %`;
+  p.textContent = `${corretti} / ${totale} Questions`;
+
+  correct_results.appendChild(h2);
+  correct_results.appendChild(p);
+};
+
+correct();
 // Wrong Resutls
 
 const incorrect_results = document.getElementById('right ');
+const wrong_results = document.getElementById('right');
+
+const wrong = () => {
+  const h2 = document.createElement('h2');
+  const p = document.createElement('p');
+  const percentuale = Math.round((sbagliati / totale) * 100);
+  h2.textContent = `${percentuale} %`;
+  p.textContent = `${sbagliati} / ${totale} Questions`;
+
+  wrong_results.appendChild(h2);
+  wrong_results.appendChild(p);
+};
+
+wrong();
