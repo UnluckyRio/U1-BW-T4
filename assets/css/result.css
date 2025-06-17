@@ -1,21 +1,33 @@
 /* INFORMAZIONI GENERALI */
 html {
-  background-image: url('../img/bg.jpg');
-  color: #e8e7ec;
-  background-size: cover;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  padding: 0;
 }
 
 body {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  padding-left: 125px;
-  padding-right: 125px;
+  background: url(../img/bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #e8e7ec;
 }
 
 /* LOGO */
-img {
-  width: 15%;
+#logo {
+  padding-top: 50px;
+  padding-left: 125px;
   height: auto;
+  width: 10%;
 }
 
 /* TITOLO */
@@ -41,7 +53,6 @@ img {
 aside {
   display: flex;
   margin-top: 2em;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -66,17 +77,6 @@ aside {
 }
 
 /* CENTRO TESTO AL CENTRO DEL DONUT */
-
-#testoInCentro {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2.3em;
-  color: #4caf50;
-  font-weight: bold;
-  pointer-events: none;
-}
 
 /* DESTRA WORNG */
 
