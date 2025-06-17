@@ -160,7 +160,7 @@ let timeLeft = totalTime;
 let timerInterval;
 
 function updateCircle(progress) {
-  const offset = circumference * progress;
+  const offset = circumference * (- progress);
   progressCircle.style.strokeDashoffset = offset;
 }
 
