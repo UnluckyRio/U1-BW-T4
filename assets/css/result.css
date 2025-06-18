@@ -142,8 +142,8 @@ footer {
   width: 100%; /* Larghezza del footer */
   text-align: center; /* Centra il testo del footer */
   padding: 10px; /* Padding interno per il footer */
-  font-family: "Quicksand", sans-serif; /* Font del footer */
-  font-size: 1rem; /* Dimensione del testo del footer */
+  font-family: "inter", sans-serif; /* Font del footer */
+  font-size: 20px; /* Dimensione del testo del footer */
   margin-top: auto; /* Spinge il footer in fondo alla pagina */
   position: relative; /* Posizione relativa per il footer */
   background: rgba(255, 255, 255, 0.1);

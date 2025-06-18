@@ -66,7 +66,7 @@ button.answer-btn {
   border-radius: 50px;
   background: transparent;
   color: #e8e7ec;
-  font-family: inter;
+  font-family: "inter", sans-serif;
   font-size: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
