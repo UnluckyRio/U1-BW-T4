@@ -53,6 +53,8 @@ body {
 aside {
   display: flex;
   margin-top: 2em;
+  justify-content: space-between;
+  width: 50%;
   align-items: center;
 }
 
@@ -112,6 +114,7 @@ section {
 button {
   background-image: url("../img/bg.jpg");
   background-position: center;
+  bottom: 20px;
   border: solid 2px;
   text-decoration: none;
   height: 57px;
