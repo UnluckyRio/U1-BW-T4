@@ -3,65 +3,66 @@
 const questions = [
   {
     type: "multiple",
-    question: "Qual è il numero del Pokédex di Bulbasaur?",
+    question: "Qual è il numero del Pokédex di Bulbasaur? 🌱",
     correct_answer: "#001",
     incorrect_answers: ["#004", "#007", "#025"],
   },
   {
     type: "multiple",
     question:
-      "Quale tipo NON è presente in nessun Pokémon di Prima Generazione?",
+      "Quale tipo NON è presente in nessun Pokémon di Prima Generazione? ❌",
     correct_answer: "Buio",
     incorrect_answers: ["Ghiaccio", "Drago", "Roccia"],
   },
   {
     type: "multiple",
-    question: "In cosa si evolve Machop?",
+    question: "In cosa si evolve Machop? 🧬",
     correct_answer: "Machoke",
     incorrect_answers: ["Machop non si evolve", "Hitmonlee", "Primeape"],
   },
   {
     type: "multiple",
-    question: "Quanti Pokémon compongono ufficialmente la Prima Generazione?",
+    question:
+      "Quanti Pokémon compongono ufficialmente la Prima Generazione? #️⃣",
     correct_answer: "151",
     incorrect_answers: ["121", "101", "131"],
   },
   {
     type: "multiple",
-    question: "Qual è il tipo di Gengar?",
+    question: "Qual è il tipo di Gengar? 🔮",
     correct_answer: "Spettro e Veleno",
     incorrect_answers: ["Psico", "Spettro e Buio", "Spettro e Psico"],
   },
   {
     type: "multiple",
-    question: "Quale Pokémon si evolve usando una Pietrafocaia?",
+    question: "Quale Pokémon si evolve usando una Pietrafocaia? 🔥",
     correct_answer: "Eevee",
     incorrect_answers: ["Machop", "Pikachu", "Kadabra"],
   },
   {
     type: "multiple",
     question:
-      "Chi è il Campione della Lega Pokémon di Kanto nei giochi Rosso e Blu?",
+      "Chi è il Campione della Lega Pokémon di Kanto nei giochi Rosso e Blu? 👑",
     correct_answer: "Gary (Blu)",
     incorrect_answers: ["Giovanni", "Brock", "Lance"],
   },
   {
     type: "multiple",
     question:
-      "Quale tipo di mossa NON ha effetto contro i Pokémon di tipo Spettro?",
+      "Quale tipo di mossa NON ha effetto contro i Pokémon di tipo Spettro? 👻",
     correct_answer: "Normale",
     incorrect_answers: ["Buio", "Spettro", "Elettro"],
   },
   {
     type: "multiple",
-    question: "Che tipo è il Pokémon Leggendario Mewtwo?",
+    question: "Che tipo è il Pokémon Leggendario Mewtwo? 💫",
     correct_answer: "Psico",
     incorrect_answers: ["Normale", "Veleno", "Drago"],
   },
   {
     type: "multiple",
     question:
-      "Qual è l'unica mossa utilizzabile da Magikarp fino al livello 15?",
+      "Qual è l'unica mossa utilizzabile da Magikarp fino al livello 15? 💦",
     correct_answer: "Splash",
     incorrect_answers: ["Azione", "Iper Raggio", "Pistolacqua"],
   },
