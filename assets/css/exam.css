@@ -219,3 +219,17 @@ svg {
 .label.bottom {
   margin-bottom: 35px;
 }
+@keyframes flash {
+  0%, 100% {
+    color: white;
+    transform: scale(1);
+  }
+  50% {
+    color: red;
+    transform: scale(1.4);
+  }
+}
+
+.timer-text.flash {
+  animation: flash 1s infinite;
+}
