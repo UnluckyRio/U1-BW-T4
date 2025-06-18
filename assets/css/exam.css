@@ -66,7 +66,7 @@ button.answer-btn {
   border-radius: 50px;
   background: transparent;
   color: #e8e7ec;
-  font-family: inter;
+  font-family: "inter", sans-serif;
   font-size: 20px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -161,6 +161,7 @@ footer a:hover {
   cursor: pointer; /* Cambia il cursore al passaggio del mouse */
   text-decoration: none; /* Sottolinea il link al passaggio del mouse */
 }
+/* TIMER */
 .timer-container {
   position: fixed;
   top: 50px;
@@ -180,20 +181,22 @@ footer a:hover {
 }
 
 .timer-text {
+  font-family: "inter", sans-serif;
   z-index: 1;
   font-size: 40px;
   font-weight: bold;
-  color: white;
+  color: #e8e7ec;
 }
 
 svg {
   position: absolute;
 }
 .number {
+  font-family: "inter", sans-serif;
   z-index: 1;
   font-size: 20px;
   font-weight: bold;
-  color: white;
+  color: #e8e7ec;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -202,15 +205,16 @@ svg {
 }
 
 .label {
+  font-family: "inter", sans-serif;
   font-size: 8px;
-  font-weight:normal;
+  font-weight: normal;
   opacity: 0.7;
-  color: white;
+  color: #e8e7ec;
   line-height: 0.5;
 }
 
 .label.top {
-margin-top: 35px;
+  margin-top: 35px;
 }
 
 .label.bottom {

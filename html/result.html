@@ -7,12 +7,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- TITLE -->
-    <title>Document</title>
+    <title>PokéQuiz EPICODE - Result</title>
     <!-- LINK CSS -->
     <link rel="stylesheet" href="../assets/css/reset.css" />
     <link rel="stylesheet" href="../assets/css/result.css" />
     <!-- FONT -->
-     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap"
@@ -20,40 +20,49 @@
     />
     <!-- ICONA -->
     <link rel="icon" type="image/png" href="../assets/img/logo.jpg" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <!-- BODY -->
   <body>
     <!-- HEADER -->
     <header>
-      <img src="../assets/img/epicode_logo.png"></img>
+      <img id="logo" src="../assets/img/epicode_logo.png" />
     </header>
     <!-- MAIN -->
     <main>
       <div class="title">
-      <h1>Results</h1>
-      <p>The summary of your answers:</p>
-    </main>
+        <h1>Results</h1>
+        <p>The summary of your answers:</p>
       </div>
-      <aside>
-        <div id="left">
+    </main>
+    <aside>
+      <div id="left">
         <h1>Correct</h1>
+      </div>
+      <div class="grafico">
+        <canvas id="myDonutChart" width="400" height="400"></canvas>
+        <div id="testoInCentro">
+          <h1></h1>
+          <h2></h2>
+          <p></p>
         </div>
-        <div class="grafico"></div>
-        <div>
-        <h1 id="right">Wrong</h1>
-        </div>
-      </aside>
-      <section>
-      <button><a>RATE US</a></button>
-      </section>
+      </div>
+      <div id="right">
+        <h1>Wrong</h1>
+      </div>
+    </aside>
+    <section>
+      <button><a href="../html/review.html">RATE US</a></button>
+    </section>
     <!-- FOOTER -->
     <footer>
       <!-- Link al mio GitHub -->
       <a href="https://github.com/UnluckyRio/U1-BW-T4" target="_blank"
-        >Realizzato dal Team 4
+        >Realizzato dal Team 4 "The Merger"
       </a>
     </footer>
   </body>
   <!-- LINK JS -->
   <script src="../script/script.js"></script>
+  <script src="../script/result.js"></script>
 </html>

@@ -54,7 +54,7 @@ h3 {
 }
 /* TEXTS */
 p {
-  font-family: Inter;
+  font-family: "Inter", sans-serif;
   font-size: 16px;
   color: #e8e7ec;
   padding-bottom: 10px;
@@ -131,7 +131,7 @@ label {
 button {
   background-color: #00ffff;
   color: #0b113b;
-  font-family: Outfit, sans-serif;
+  font-family: "Outfit", sans-serif;
   font-size: 1.5rem;
   font-weight: bold;
   position: relative;
