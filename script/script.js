@@ -162,6 +162,10 @@ let timerInterval;
 function updateCircle(progress) {
   const offset = circumference * (- progress);
   progressCircle.style.strokeDashoffset = offset;
+
+   const color = getColor(timeLeft);
+  progressCircle.style.stroke = color;
+  progressCircle.style.transition = "stroke 0.5s ease";
 }
 
 function startTimer() {
@@ -193,3 +197,17 @@ function goToNextQuestion() {
   startTimer();
 }
   showQuestion()
+
+function getColor(timeLeft) {
+  if (timeLeft > 20) {
+    return "#00FFFF";
+  } else if (timeLeft > 10) {
+    const ratio = (20 - timeLeft) / 10; 
+    const r = Math.round(0 + ratio * 255); 
+    const g = Math.round(255 - ratio * 255);
+    const b = Math.round(255 - ratio * 255);
+    return `rgb(${r}, ${g}, ${b})`;
+  } else {
+    return "#FF0000"; 
+  }
+}
