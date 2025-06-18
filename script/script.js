@@ -174,6 +174,7 @@ function startTimer() {
   timeLeft = totalTime;
   timerText.textContent = timeLeft;
   updateCircle(0);
+  timerText.classList.remove("flash");
 
   timerInterval = setInterval(() => {
     timeLeft--;
