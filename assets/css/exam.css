@@ -166,8 +166,8 @@ footer a:hover {
   position: fixed;
   top: 50px;
   right: 200px;
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -183,7 +183,7 @@ footer a:hover {
 .timer-text {
   font-family: "inter", sans-serif;
   z-index: 1;
-  font-size: 40px;
+  font-size: 49px;
   font-weight: bold;
   color: #e8e7ec;
 }
@@ -206,11 +206,10 @@ svg {
 
 .label {
   font-family: "inter", sans-serif;
-  font-size: 8px;
+  font-size: 8.5px;
   font-weight: normal;
-  opacity: 0.7;
   color: #e8e7ec;
-  line-height: 0.5;
+  line-height: 0.2;
 }
 
 .label.top {

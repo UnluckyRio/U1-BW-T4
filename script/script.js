@@ -153,7 +153,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 const timerText = document.getElementById('timer');
 const progressCircle = document.getElementById('progress-circle');
-const circumference = 2 * Math.PI * 45; // r=45
+const circumference = 2 * Math.PI * 55; // r=55
 progressCircle.style.strokeDasharray = circumference;
 
 let totalTime = 30;
